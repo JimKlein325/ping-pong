@@ -14,6 +14,7 @@ function pingPong(goal) {
   return output;
 }
 
+
 $(document).ready(function(){
   $('#ping-pong').submit(function(event){
     event.preventDefault();
