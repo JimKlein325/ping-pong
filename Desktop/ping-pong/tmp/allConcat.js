@@ -1,3 +1,4 @@
+/*
 function pingPong(goal) {
   var output = [];
   for (var i = 1; i <= goal; i++){
@@ -13,7 +14,8 @@ function pingPong(goal) {
   }
   return output;
 }
-
+*/
+var pingPong = require('./../js/ping-pong.js').pingPong;
 
 $(document).ready(function(){
   $('#ping-pong').submit(function(event){
@@ -25,5 +27,14 @@ $(document).ready(function(){
     output.forEach(function(element){
       $('#solution').append("<li>" + element +"</li>");
     });
+  });
+});
+
+$(document).ready(function(){
+  $('#signup').submit(function(event){
+    event.preventDefault();
+    var email = $('#email').val();
+    $('#signup').hide();
+    $('#solution').prepend('<p>Thank you, ' + email + ' has been added to our list!</p>');
   });
 });
